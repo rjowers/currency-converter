@@ -1,0 +1,25 @@
+.converter-container {
+  border: solid;
+  background-color: black;
+  height: 600px;
+  width: 30%;
+  margin: auto;
+  vertical-align: center; }
+
+.title {
+  color: white;
+  text-align: center; }
+
+.first-form {
+  display: flex;
+  flex-direction: column; }
+
+.first-currency {
+  color: #98B431; }
+
+.second-form {
+  display: flex;
+  flex-direction: column; }
+
+.second-currency {
+  color: #DB8120; }

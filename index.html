@@ -14,6 +14,43 @@
 
 <body ng-controller='myController' >
 
+  <div class="converter-container">
+      <div class="title">Currency Converter</div>
+      
+      <form class="first-form">
+
+    
+        <label class="first-currency"  for="country">USD US Dollar</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <!-- <label for="amount"></label> -->
+        <input type="text" class="amount" name="firstamount" placeholder="Please enter an amount">
+      
+        <input type="submit" value="Submit">
+      </form>
+
+      <form class="second-form">
+          
+              
+                  <label class="second-currency"  for="country">EUR Euro</label>
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+          
+                  <!-- <label for="amount"></label> -->
+                  <input type="text" class="amount" name="firstamount" placeholder="Please enter an amount">
+                
+                  <input type="submit" value="Submit">
+                </form>
+  </div> 
+
+
 </body>
 
 
