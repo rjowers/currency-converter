@@ -17,20 +17,22 @@
   <div class="converter-container">
       <div class="title">Currency Converter</div>
       
-      <form class="first-form">
+      <form ng-model="convert" class="first-form">
 
     
-        <label class="first-currency"  for="country">USD US Dollar</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
+        <label class="first-currency"  for="country">{{chosenCurrency}}</label>
+        
+        <select 
+          ng-model="chosenCurrency"
+          ng-change="getSelectedcurrency()"
+]         ng-options="currencycode for currencycode in currencies">
+        
         </select>
 
         <!-- <label for="amount"></label> -->
-        <input type="text" class="amount" name="firstamount" placeholder="Please enter an amount">
+        <input ng-model="money" type="text" class="amount" name="firstamount" placeholder="Please enter an amount">
       
-        <input type="submit" value="Submit">
+        <!-- <input type="submit" value="Submit"> -->
       </form>
 
       <form class="second-form">
@@ -44,9 +46,9 @@
                   </select>
           
                   <!-- <label for="amount"></label> -->
-                  <input type="text" class="amount" name="firstamount" placeholder="Please enter an amount">
+                  <input  type="text" class="amount" name="firstamount" placeholder="{{data}}">
                 
-                  <input type="submit" value="Submit">
+                  <input type="submit" value="Submit" ng-click="submitForm(money)">
                 </form>
   </div> 
 
