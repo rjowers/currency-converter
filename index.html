@@ -9,10 +9,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body ng-controller='myController' >
+<body ng-controller='myController' ng-cloak >
 
   <div class="converter-container">
       <div class="title">Currency Converter</div>
@@ -20,35 +21,35 @@
       <form ng-model="convert" class="first-form">
 
     
-        <label class="first-currency"  for="country">{{chosenCurrency}}</label>
         
         <select 
           ng-model="chosenCurrency"
           ng-change="getSelectedcurrency()"
-]         ng-options="currencycode for currencycode in currencies">
-        
+          ng-options="currencycode for currencycode in currencies"
+          class="select-one">
+          
+          <option value="" disabled selected>Please select a currency</option>
         </select>
 
-        <!-- <label for="amount"></label> -->
         <input ng-model="money" type="text" class="amount" name="firstamount" placeholder="Please enter an amount">
       
-        <!-- <input type="submit" value="Submit"> -->
       </form>
 
       <form class="second-form">
           
               
-                  <label class="second-currency"  for="country">EUR Euro</label>
-                  <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
+                  <select 
+                   ng-model="chosenCurrency2"
+                   ng-change="getSelectedcurrency2()"
+                   ng-options="currencycode for currencycode in currencies2"
+                   class="select-two">
+                   <option value="" disabled selected>Please select a currency</option>
+                   
                   </select>
           
-                  <!-- <label for="amount"></label> -->
-                  <input  type="text" class="amount" name="firstamount" placeholder="{{data}}">
+                  <div class="amount">{{data}}</div>
                 
-                  <input type="submit" value="Submit" ng-click="submitForm(money)">
+                  <input type="submit" class="submit  animated infinite tada" value="Submit" ng-click="submitForm(money)">
                 </form>
   </div> 
 
@@ -58,6 +59,5 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<!-- <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.1.js"></script> -->
    <script src="scripts/main.js"></script>
 </html>

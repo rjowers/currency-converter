@@ -1,25 +1,129 @@
+*:focus {
+  outline: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #858580; }
+
 .converter-container {
   border: solid;
-  background-color: black;
+  background-color: #393937;
   height: 600px;
-  width: 30%;
+  width: 500px;
   margin: auto;
   vertical-align: center; }
 
 .title {
-  color: white;
-  text-align: center; }
+  color: #DEDEDE;
+  text-align: center;
+  font-size: 30px; }
+
+.select-one {
+  background-color: #393937;
+  color: #4de14d;
+  border: none;
+  margin-bottom: 10px; }
+
+.select-two {
+  background-color: #393937;
+  color: #4d4de1;
+  border: none;
+  margin-bottom: 10px; }
 
 .first-form {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px; }
 
 .first-currency {
   color: #98B431; }
 
 .second-form {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: 40px;
+  font-size: 24px; }
+
+.second-currency {
+  text-align: center; }
 
 .second-currency {
   color: #DB8120; }
+
+.amount {
+  background-color: #DEDEDE;
+  height: 35px;
+  border-radius: 10px;
+  border: none; }
+
+.submit {
+  background: #e14d4d;
+  border: 1px solid #391515;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 100px; }
+
+.animated {
+  -webkit-animation-duration: 20s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.animated.hinge {
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s; }
+
+@-webkit-keyframes tada {
+  0%, 90% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  91%, 92% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg); }
+  93%, 95%, 97%, 99% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg); }
+  94%, 96%, 98% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg); }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); } }
+
+@keyframes tada {
+  0%, 90% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  91%, 92% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg); }
+  93%, 95%, 97%, 99% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg); }
+  94%, 96%, 98% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg); }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); } }
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada; }
